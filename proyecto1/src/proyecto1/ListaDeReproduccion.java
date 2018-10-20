@@ -27,8 +27,7 @@ public class ListaDeReproduccion implements ListModel<String> {
 	}	
 	
 	//Constructor por defecto que inicializa la lista vacía
-	public ListaDeReproduccion(ArrayList<File> ficherosLista, int ficheroEnCurso,
-			ArrayList<ListDataListener> misEscuchadores) {
+	public ListaDeReproduccion() {
 		super();
 		this.ficherosLista = new ArrayList<File>();
 		this.ficheroEnCurso = -1;
