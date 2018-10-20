@@ -52,7 +52,27 @@ public class ListaDeReproduccion implements ListModel<String> {
 			ficherosLista.addAll(aux);
 		}
 	}
+	
+	//Devuelve el número de elementos de la lista
+	public int size() {
+		return ficherosLista.size();
+	}
+	
+	//Añade un fichero al final de la lista
+	public void add(File f) {
+		ficherosLista.add(f);
+	}
 
+	//Eliminar un fichero de la lista dada su posición
+	public void removeFic(int posi) {
+		ficherosLista.remove(posi);
+	}
+	
+	//Borra la lista
+	public void clear() {
+		ficherosLista.clear();
+	}
+	
 	/** Añade a la lista de reproducción todos los ficheros que haya en la 
 	 * carpeta indicada, que cumplan el filtro indicado.
 	 * Si hay cualquier error, la lista de reproducción queda solo con los ficheros
