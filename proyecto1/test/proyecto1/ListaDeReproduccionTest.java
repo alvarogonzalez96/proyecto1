@@ -26,6 +26,24 @@ public class ListaDeReproduccionTest {
 		lr2.clear();
 	}
 
+	//Chequeo de error por getFic(índice) por encima de final
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void testGet_Exc1() {
+			lr1.getFic(0); 
+	}
+	
+	//Chequeo de error por get(índice) por debajo de 0
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void testGet_Exc2() {
+		lr2.getFic(-1);
+	}
+	
+	//Chequeo de funcionamiento correcto de get(índice)
+	@Test
+	public void testGet() {
+		assertEquals(FIC_TEST1, lr2.getFic(0));
+	}
+	
 	@Test
 	public void test() {
 		fail("Not yet implemented");
