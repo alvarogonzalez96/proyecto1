@@ -1,7 +1,12 @@
 package proyecto1;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import javax.swing.ListModel;
 import javax.swing.event.ListDataEvent;
 import javax.swing.event.ListDataListener;
@@ -85,11 +90,28 @@ public class ListaDeReproduccion implements ListModel<String> {
 	 * 							que empiece por p y tenga cualquier extensión.
 	 * @return	Número de ficheros que han sido añadidos a la lista
 	 */
+	private static Logger logger = Logger.getLogger(ListaDeReproduccion.class.getName());
+
+	private static final boolean ANYADIR_A_FIC_LOG = false; //poner true para no sobreescribir
+	static {
+		try {
+			logger.addHandler(new FileHandler(
+					ListaDeReproduccion.class.getName() + ".log.xml", ANYADIR_A_FIC_LOG));
+		} catch (SecurityException | IOException e) {
+			logger.log(Level.SEVERE, "Error en creación fichero log");
+		}
+	}
+	
+	
 	public int add(String carpetaFicheros, String filtroFicheros) {
 		// TODO: Codificar este método de acuerdo a la práctica (pasos 3 y sucesivos)
-		filtroFicheros = filtroFicheros.replaceAll( "\\.", "\\\\." );  // Pone el símbolo de la expresión regular \. donde figure un .
+		logger.log(Level.INFO, "Añadiendo ficheros con filtro " + filtroFicheros);
+		filtroFicheros = filtroFicheros.replaceAll("\\*\\.", "\\.*\\\\.");  // Pone el símbolo de la expresión regular \. donde figure un .
+		logger.log(Level.INFO, "Ficheros añadidos  " + filtroFicheros);
 		return 0;
 	}
+	
+	
 	
 	//
 	// Métodos de selección

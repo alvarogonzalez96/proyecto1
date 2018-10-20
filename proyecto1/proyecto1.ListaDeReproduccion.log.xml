@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-10-20T18:10:38</date>
+  <millis>1540051838624</millis>
+  <sequence>0</sequence>
+  <logger>proyecto1.ListaDeReproduccion</logger>
+  <level>INFO</level>
+  <class>proyecto1.ListaDeReproduccion</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>Añadiendo ficheros con filtro *Pentatonix*.mp4</message>
+</record>
+<record>
+  <date>2018-10-20T18:10:38</date>
+  <millis>1540051838644</millis>
+  <sequence>1</sequence>
+  <logger>proyecto1.ListaDeReproduccion</logger>
+  <level>INFO</level>
+  <class>proyecto1.ListaDeReproduccion</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>Ficheros añadidos  *Pentatonix.*\.mp4</message>
+</record>
+</log>

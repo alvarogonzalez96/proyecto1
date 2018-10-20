@@ -12,7 +12,7 @@ public class ListaDeReproduccionTest {
 
 	private ListaDeReproduccion lr1;
 	private ListaDeReproduccion lr2;
-	private final File FIC_TEST1 = new File("test/res/No del grupo.mp4");
+	private final File FIC_TEST1 = new File("/Users/Alvaro/Desktop/res/No del grupo.mp4");
 	
 	@Before
 	public void setUp() throws Exception {
@@ -24,6 +24,16 @@ public class ListaDeReproduccionTest {
 	@After
 	public void tearDown() throws Exception {
 		lr2.clear();
+	}
+	
+	@Test
+	public void addCarpeta() {
+		String carpetaTest = "/Users/Alvaro/desktop/res/";
+		String filtroTest = "*Pentatonix*.mp4";
+		
+		ListaDeReproduccion lr = new ListaDeReproduccion();
+		lr.add(carpetaTest, filtroTest);
+		fail("Método sin acabar");
 	}
 
 	//Chequeo de error por getFic(índice) por encima de final
@@ -44,9 +54,27 @@ public class ListaDeReproduccionTest {
 		assertEquals(FIC_TEST1, lr2.getFic(0));
 	}
 	
+	//Chequeo de intercambio de elementos
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testIntercambio() {
+		
+	} 
+	
+	//Chequeo de añadido y borrado de elementos
+	@Test
+	public void testAdd() {
+		
 	}
+	
+	//Chequeo de tamaño
+	@Test
+	public void testSize() {
+		
+	}
+	
+	//@Test
+	//public void test() {
+	//	fail("Not yet implemented");
+	//}
 
 }

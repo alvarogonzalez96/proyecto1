@@ -46,11 +46,11 @@ public class VideoPlayer extends JFrame {
 		cbAleatorio = new JCheckBox("Rep. aleatoria");
 		lMensaje = new JLabel( "" );
 		JPanel pBotonera = new JPanel();
-		JButton bAnyadir = new JButton( new ImageIcon( VideoPlayer.class.getResource("img/Button Add.png")) );
-		JButton bAtras = new JButton( new ImageIcon( VideoPlayer.class.getResource("img/Button Rewind.png")) );
-		JButton bPausaPlay = new JButton( new ImageIcon( VideoPlayer.class.getResource("img/Button Play Pause.png")) );
-		JButton bAdelante = new JButton( new ImageIcon( VideoPlayer.class.getResource("img/Button Fast Forward.png")) );
-		JButton bMaximizar = new JButton( new ImageIcon( VideoPlayer.class.getResource("img/Button Maximize.png")) );
+		JButton bAnyadir = new JButton( new ImageIcon( VideoPlayer.class.getResource("/Users/alvaro/Desktop/img/Button Add.png")) );
+		JButton bAtras = new JButton( new ImageIcon( VideoPlayer.class.getResource("/Users/alvaro/Desktop/img/Button Rewind.png")) );
+		JButton bPausaPlay = new JButton( new ImageIcon( VideoPlayer.class.getResource("/Users/alvaro/Desktop/img/Button Play Pause.png")) );
+		JButton bAdelante = new JButton( new ImageIcon( VideoPlayer.class.getResource("/Users/alvaro/Desktop/img/Button Fast Forward.png")) );
+		JButton bMaximizar = new JButton( new ImageIcon( VideoPlayer.class.getResource("/Users/alvaro/Desktop/img/Button Maximize.png")) );
 		
 		// Componente de VCLj
         mediaPlayerComponent = new EmbeddedMediaPlayerComponent() {
