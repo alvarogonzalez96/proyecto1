@@ -2,8 +2,8 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2018-10-20T18:10:38</date>
-  <millis>1540051838624</millis>
+  <date>2018-10-20T19:28:58</date>
+  <millis>1540056538607</millis>
   <sequence>0</sequence>
   <logger>proyecto1.ListaDeReproduccion</logger>
   <level>INFO</level>
@@ -13,14 +13,146 @@
   <message>Añadiendo ficheros con filtro *Pentatonix*.mp4</message>
 </record>
 <record>
-  <date>2018-10-20T18:10:38</date>
-  <millis>1540051838644</millis>
+  <date>2018-10-20T19:28:58</date>
+  <millis>1540056538634</millis>
   <sequence>1</sequence>
   <logger>proyecto1.ListaDeReproduccion</logger>
   <level>INFO</level>
   <class>proyecto1.ListaDeReproduccion</class>
   <method>add</method>
   <thread>1</thread>
-  <message>Ficheros añadidos  *Pentatonix.*\.mp4</message>
+  <message>Ficheros añadidos  .*Pentatonix.*\.mp4</message>
+</record>
+<record>
+  <date>2018-10-20T19:28:58</date>
+  <millis>1540056538636</millis>
+  <sequence>2</sequence>
+  <logger>proyecto1.ListaDeReproduccion</logger>
+  <level>INFO</level>
+  <class>proyecto1.ListaDeReproduccion</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>AÑADIDO!!! [Official Video] Daft Punk - Pentatonix.mp4</message>
+</record>
+<record>
+  <date>2018-10-20T19:28:58</date>
+  <millis>1540056538639</millis>
+  <sequence>3</sequence>
+  <logger>proyecto1.ListaDeReproduccion</logger>
+  <level>INFO</level>
+  <class>proyecto1.ListaDeReproduccion</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>AÑADIDO!!! [Official Video] I Need Your Love - Pentatonix (Calvin Harris feat. Ellie Goulding Cover).mp4</message>
+</record>
+<record>
+  <date>2018-10-20T19:28:58</date>
+  <millis>1540056538640</millis>
+  <sequence>4</sequence>
+  <logger>proyecto1.ListaDeReproduccion</logger>
+  <level>INFO</level>
+  <class>proyecto1.ListaDeReproduccion</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>AÑADIDO!!! Fichero erroneo Pentatonix.mp4</message>
+</record>
+<record>
+  <date>2018-10-20T19:28:58</date>
+  <millis>1540056538641</millis>
+  <sequence>5</sequence>
+  <logger>proyecto1.ListaDeReproduccion</logger>
+  <level>SEVERE</level>
+  <class>proyecto1.ListaDeReproduccion</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>No se ha añadido a la lista</message>
+</record>
+<record>
+  <date>2018-10-20T19:28:58</date>
+  <millis>1540056538643</millis>
+  <sequence>6</sequence>
+  <logger>proyecto1.ListaDeReproduccion</logger>
+  <level>SEVERE</level>
+  <class>proyecto1.ListaDeReproduccion</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>No se ha añadido a la lista</message>
+</record>
+<record>
+  <date>2018-10-20T19:28:58</date>
+  <millis>1540056538644</millis>
+  <sequence>7</sequence>
+  <logger>proyecto1.ListaDeReproduccion</logger>
+  <level>INFO</level>
+  <class>proyecto1.ListaDeReproduccion</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>Añadiendo ficheros con filtro *Pentatonix*.mp4</message>
+</record>
+<record>
+  <date>2018-10-20T19:28:58</date>
+  <millis>1540056538645</millis>
+  <sequence>8</sequence>
+  <logger>proyecto1.ListaDeReproduccion</logger>
+  <level>INFO</level>
+  <class>proyecto1.ListaDeReproduccion</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>Ficheros añadidos  .*Pentatonix.*\.mp4</message>
+</record>
+<record>
+  <date>2018-10-20T19:28:58</date>
+  <millis>1540056538646</millis>
+  <sequence>9</sequence>
+  <logger>proyecto1.ListaDeReproduccion</logger>
+  <level>INFO</level>
+  <class>proyecto1.ListaDeReproduccion</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>AÑADIDO!!! [Official Video] Daft Punk - Pentatonix.mp4</message>
+</record>
+<record>
+  <date>2018-10-20T19:28:58</date>
+  <millis>1540056538648</millis>
+  <sequence>10</sequence>
+  <logger>proyecto1.ListaDeReproduccion</logger>
+  <level>INFO</level>
+  <class>proyecto1.ListaDeReproduccion</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>AÑADIDO!!! [Official Video] I Need Your Love - Pentatonix (Calvin Harris feat. Ellie Goulding Cover).mp4</message>
+</record>
+<record>
+  <date>2018-10-20T19:28:58</date>
+  <millis>1540056538649</millis>
+  <sequence>11</sequence>
+  <logger>proyecto1.ListaDeReproduccion</logger>
+  <level>INFO</level>
+  <class>proyecto1.ListaDeReproduccion</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>AÑADIDO!!! Fichero erroneo Pentatonix.mp4</message>
+</record>
+<record>
+  <date>2018-10-20T19:28:58</date>
+  <millis>1540056538649</millis>
+  <sequence>12</sequence>
+  <logger>proyecto1.ListaDeReproduccion</logger>
+  <level>SEVERE</level>
+  <class>proyecto1.ListaDeReproduccion</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>No se ha añadido a la lista</message>
+</record>
+<record>
+  <date>2018-10-20T19:28:58</date>
+  <millis>1540056538650</millis>
+  <sequence>13</sequence>
+  <logger>proyecto1.ListaDeReproduccion</logger>
+  <level>SEVERE</level>
+  <class>proyecto1.ListaDeReproduccion</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>No se ha añadido a la lista</message>
 </record>
 </log>

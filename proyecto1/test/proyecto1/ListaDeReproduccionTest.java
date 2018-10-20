@@ -26,6 +26,7 @@ public class ListaDeReproduccionTest {
 		lr2.clear();
 	}
 	
+	
 	@Test
 	public void addCarpeta() {
 		String carpetaTest = "/Users/Alvaro/desktop/res/";
@@ -33,7 +34,10 @@ public class ListaDeReproduccionTest {
 		
 		ListaDeReproduccion lr = new ListaDeReproduccion();
 		lr.add(carpetaTest, filtroTest);
-		fail("Método sin acabar");
+		
+		assertEquals(3, lr.add(carpetaTest, filtroTest));
+		
+		//fail("Método sin acabar");
 	}
 
 	//Chequeo de error por getFic(índice) por encima de final
@@ -72,9 +76,10 @@ public class ListaDeReproduccionTest {
 		
 	}
 	
-	//@Test
-	//public void test() {
-	//	fail("Not yet implemented");
-	//}
+	
+	public void test() {
+		
+		//fail("Not yet implemented");
+	}
 
 }

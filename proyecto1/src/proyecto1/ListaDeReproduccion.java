@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.swing.ListModel;
 import javax.swing.event.ListDataEvent;
@@ -106,11 +108,30 @@ public class ListaDeReproduccion implements ListModel<String> {
 	public int add(String carpetaFicheros, String filtroFicheros) {
 		// TODO: Codificar este método de acuerdo a la práctica (pasos 3 y sucesivos)
 		logger.log(Level.INFO, "Añadiendo ficheros con filtro " + filtroFicheros);
-		filtroFicheros = filtroFicheros.replaceAll("\\*\\.", "\\.*\\\\.");  // Pone el símbolo de la expresión regular \. donde figure un .
+		filtroFicheros = filtroFicheros.replaceAll("\\.", "\\\\.").replaceAll("\\*", "\\.*");  // Pone el símbolo de la expresión regular \. donde figure un .
 		logger.log(Level.INFO, "Ficheros añadidos  " + filtroFicheros);
-		return 0;
+		
+		File fInic = new File(carpetaFicheros);
+		String patron = filtroFicheros;
+		System.out.println(patron);
+		Pattern pat = Pattern.compile(patron);  // Se compila
+		int n = 0;
+		
+		if(fInic.isDirectory()) {
+			for (File f : fInic.listFiles()) {
+				logger.log(Level.FINE, "Procesando fichero" + f.getName());
+				//TODO: Comprobar que f.getName() cumple el patrón y añadirlo a la lista
+				if (pat.matcher(f.getName()).matches()) {
+					ficherosLista.add(f);
+					logger.log(Level.INFO, "AÑADIDO!!! " + f.getName());
+					n++;
+				} else {
+					logger.log(Level.SEVERE, "No se ha añadido a la lista");
+				}
+			}
+		}
+		return n;
 	}
-	
 	
 	
 	//
