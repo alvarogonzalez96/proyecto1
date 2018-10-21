@@ -138,6 +138,23 @@ public class ListaDeReproduccion implements ListModel<String> {
 	// Métodos de selección
 	//
 	
+	//Seleción random
+	public boolean irARandom() {
+		boolean b = true;
+		int n = (int)(Math.random()*ficherosLista.size()+1);
+		
+		if(n > ficherosLista.size()) {
+			b = false;
+		} else if(n < ficherosLista.size()) {
+			b = false;
+		} else {
+			b = true;
+			ficheroEnCurso = n;
+		}
+		
+		return b;
+	}
+	
 	/** Seleciona el primer fichero de la lista de reproducción
 	 * @return	true si la selección es correcta, false si hay error y no se puede seleccionar
 	 */

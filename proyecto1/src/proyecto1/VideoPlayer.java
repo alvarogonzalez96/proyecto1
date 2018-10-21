@@ -5,6 +5,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 import java.io.File;
+import java.util.ArrayList;
 
 import uk.co.caprica.vlcj.binding.LibVlc;
 import uk.co.caprica.vlcj.component.EmbeddedMediaPlayerComponent;
@@ -46,11 +47,11 @@ public class VideoPlayer extends JFrame {
 		cbAleatorio = new JCheckBox("Rep. aleatoria");
 		lMensaje = new JLabel( "" );
 		JPanel pBotonera = new JPanel();
-		JButton bAnyadir = new JButton( new ImageIcon( VideoPlayer.class.getResource("/Users/alvaro/Desktop/img/Button Add.png")) );
-		JButton bAtras = new JButton( new ImageIcon( VideoPlayer.class.getResource("/Users/alvaro/Desktop/img/Button Rewind.png")) );
-		JButton bPausaPlay = new JButton( new ImageIcon( VideoPlayer.class.getResource("/Users/alvaro/Desktop/img/Button Play Pause.png")) );
-		JButton bAdelante = new JButton( new ImageIcon( VideoPlayer.class.getResource("/Users/alvaro/Desktop/img/Button Fast Forward.png")) );
-		JButton bMaximizar = new JButton( new ImageIcon( VideoPlayer.class.getResource("/Users/alvaro/Desktop/img/Button Maximize.png")) );
+		JButton bAnyadir = new JButton( new ImageIcon( VideoPlayer.class.getResource("/img/Button Add.png")) );
+		JButton bAtras = new JButton( new ImageIcon( VideoPlayer.class.getResource("/img/Button Rewind.png")) );
+		JButton bPausaPlay = new JButton( new ImageIcon( VideoPlayer.class.getResource("/img/Button Play Pause.png")) );
+		JButton bAdelante = new JButton( new ImageIcon( VideoPlayer.class.getResource("/img/Button Fast Forward.png")) );
+		JButton bMaximizar = new JButton( new ImageIcon( VideoPlayer.class.getResource("/img/Button Maximize.png")) );
 		
 		// Componente de VCLj
         mediaPlayerComponent = new EmbeddedMediaPlayerComponent() {
@@ -220,13 +221,14 @@ public class VideoPlayer extends JFrame {
 		// Inicializar VLC.
 		// Probar con el buscador nativo...
 		boolean found = new NativeDiscovery().discover();
-    	// System.out.println( LibVlc.INSTANCE.libvlc_get_version() );  // Visualiza versión de VLC encontrada
-    	// Si no se encuentra probar otras opciones:
-    	if (!found) {
-			// Buscar vlc como variable de entorno
+    	 	//System.out.println( LibVlc.INSTANCE.libvlc_get_version() );  // Visualiza versión de VLC encontrada
+    	 	// Si no se encuentra probar otras opciones:
+    	 	if (true) {
+    			// Buscar vlc como variable de entorno
 			String vlcPath = System.getenv().get( "vlc" );
+			System.out.println(vlcPath);
 			if (vlcPath==null) {  // Poner VLC a mano
-	        	System.setProperty("jna.library.path", "c:\\Program Files\\videolan\\VLC");
+	        	System.setProperty( "jna.library.path", "/Users/alvaro/Desktop/jar_files/");
 			} else {  // Poner VLC desde la variable de entorno
 				System.setProperty( "jna.library.path", vlcPath );
 			}
@@ -237,9 +239,9 @@ public class VideoPlayer extends JFrame {
 			@Override
 			public void run() {
 				miVentana = new VideoPlayer();
-				// Descomentar estas dos líneas para ver un vídeo de ejemplo
-				// miVentana.listaRepVideos.ficherosLista = new ArrayList<File>();
-				// miVentana.listaRepVideos.ficherosLista.add( new File("test/res/[Official Video] Daft Punk - Pentatonix.mp4") );				
+				 //Descomentar estas dos líneas para ver un vídeo de ejemplo
+				 miVentana.listaRepVideos.ficherosLista = new ArrayList<File>();
+				 miVentana.listaRepVideos.ficherosLista.add( new File("test/res/[Official Video] Daft Punk - Pentatonix.mp4") );				
 				miVentana.setVisible( true );
 				miVentana.listaRepVideos.add( path, ficheros );
 				miVentana.listaRepVideos.irAPrimero();

@@ -26,6 +26,16 @@ public class ListaDeReproduccionTest {
 		lr2.clear();
 	}
 	
+	@Test
+	public void irARandom() {
+		String carpetaTest = "/Users/Alvaro/desktop/res/";
+		String filtroTest = "*Pentatonix*.mp4";
+		
+		ListaDeReproduccion lr = new ListaDeReproduccion();
+		lr.add(carpetaTest, filtroTest);
+		
+		assertEquals(true, lr.irARandom());
+	}
 	
 	@Test
 	public void addCarpeta() {
